@@ -29,9 +29,10 @@ public class Manager {
 
     public void shortListCandidate()
     {
-        Job job=new Job();
-        candidateList=new ArrayList<>();
-        candidateList=job.getCandidateList();
+//        Job Job =new Job();
+//        candidateList=new ArrayList<>();
+//        candidateList= Job.getCandidateList();
+
     }
 
     public void getCandidateSkillSet()

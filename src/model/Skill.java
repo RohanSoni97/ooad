@@ -1,11 +1,11 @@
 package model;
 
-import service.SkillSet;
+
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
+
 
 public class Skill {
     String skill_id;
@@ -46,7 +46,7 @@ public class Skill {
     public String toString() {
         return " "+this.skill_id+" "+"Skill Name :"+this.skill_name;
     }
-    public static void main(String []args) throws IOException {
+     /*public static void main(String []args) throws IOException {
         List<Skill> list=new ArrayList<>();
         File file = new File("/Users/i516409/Documents/InterviewProcessingSystem/src/list.txt");
         FileReader fr = new FileReader(file);
@@ -63,5 +63,5 @@ public class Skill {
         SkillSet skillSet=new SkillSet();
         skillSet.addSkills();
         System.out.println(list);
-    }
+    }*/
 }

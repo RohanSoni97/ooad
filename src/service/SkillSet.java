@@ -1,5 +1,6 @@
 package service;
 
+import Singleton.SkillSetSingelton;
 import model.Skill;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ public class SkillSet {
     List<Skill> skills=null;
     Skill skill=new Skill();
     List<SkillSet> skillSets=null;
-    HashMap<String, List<String>> map = new HashMap<>();
+    HashMap<String, List<String>> map = SkillSetSingelton.getHashObject();
 
     public String getSkill_set_id() {
         return skill_set_id;
@@ -41,7 +42,7 @@ public class SkillSet {
         this.candid_id = candid_id;
     }
 
-    public void addSkills(String candid_id) throws IOException {
+    public HashMap<String, List<String>> addSkills(String candid_id) throws IOException {
         String skillName=null;
         skills=new ArrayList<>();
         skills=skill.getSkills();
@@ -54,8 +55,10 @@ public class SkillSet {
         while (!skillName.equals("-1"))
         {
             list.add(skillName);
+            skillName=scanner.nextLine();
         }
         map.put(candid_id,list);
+        return map;
     }
     public HashMap<String, List<String>> getCandidateSkill()
     {
@@ -65,6 +68,16 @@ public class SkillSet {
     @Override
     public String toString() {
         return " "+skill.getSkill_id()+" "+"Skill Name :"+skill.getSkill_name();
+    }
+    public void getCandidateSkills(String candid_id)
+    {
+        System.out.println("Candidate Id : "+candid_id);
+        for (String value : map.get(candid_id))
+        {
+            System.out.println(value);
+        }
+        System.out.println("---------------------------------------");
+
     }
     public static void main(String []args) throws IOException {
 

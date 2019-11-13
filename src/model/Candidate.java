@@ -1,11 +1,13 @@
 package model;
 
+import Singleton.JobSingleton;
 import service.Document;
 import service.Job;
 import service.SkillSet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,7 +17,7 @@ public class Candidate {
    SkillSet skillSet;
    Document document;
    List<Job> jobs;
-    Job job=null;
+    Job job =null;
 
     public Job getJob() {
         return job;
@@ -49,23 +51,22 @@ public class Candidate {
     }
     public void applyJob(Candidate c)
     { int input=0;
-        System.out.println(getJobs());
         System.out.println("Enter Id No of job which you have or enter -1 to exit ::");
         Scanner scanner=new Scanner(System.in);
         input=scanner.nextInt();
-        jobs=new ArrayList<>();
+        jobs =new ArrayList<>();
         while (input != -1)
         {
-            job=new Job();
+            job =JobSingleton.objectJob();
             c.getJob().setJob_id(""+input);
             job.applyJob(c);
             input=scanner.nextInt();
         }
 
     }
-    public void addSkillSet() throws IOException {
+    public HashMap<String, List<String>> addSkillSet() throws IOException {
         skillSet=new SkillSet();
-        skillSet.addSkills(this.candidate_id);
+       return skillSet.addSkills(this.candidate_id);
     }
     public void uploadDocument()
     {
@@ -73,13 +74,13 @@ public class Candidate {
     }
     public List<Job> getJobs()
     {
-        jobs=new ArrayList<>();
-         job=new Job();
-        jobs=job.getJobs();
+        jobs =new ArrayList<>();
+         job = JobSingleton.objectJob();
+        jobs = job.getJobs();
         return jobs;
     }
     @Override
     public String toString() {
-        return "Job Id : "+job.getJob_id()+" "+"Job Desc :"+job.getJob_desc();
+        return "Job Id : "+ job.getJob_id()+" "+"Job Desc :"+ job.getJob_desc();
     }
 }

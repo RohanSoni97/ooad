@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebb1305a-7401-4a42-88c6-da524e7cda2a" name="Default Changelist" comment="" />
+    <list default="true" id="ebb1305a-7401-4a42-88c6-da524e7cda2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Singleton/CandidateSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Singleton/JobSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Singleton/SkillSetSingelton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/model/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/model/Candidate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/model/Skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/model/Skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Document.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Document.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Feedback.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Feedback.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/HR.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/HR.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Job.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/SkillSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/InterviewProcessingSystem/service/SkillSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/HR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/HR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Job.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/SkillSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/SkillSet.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +35,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1TQiHfPwf0c2txFWZLFHtKZSUHW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -36,7 +60,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="model.Main" />
+      <module name="InterviewProcessingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Skill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="model.Skill" />
       <module name="InterviewProcessingSystem" />
@@ -52,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Skill" />
       </list>
     </recent_temporary>
@@ -68,5 +106,18 @@
       <updated>1573398633809</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

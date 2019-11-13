@@ -1,11 +1,12 @@
 package service;
 
+import Singleton.JobSingleton;
 import model.Candidate;
-import model.Skill;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class HR {
     String hr_id;
@@ -30,9 +31,9 @@ public class HR {
     }
     public void shortListCandidate()
     {
-       Job job=new Job();
-       candidateList=new ArrayList<>();
-       candidateList=job.getCandidateList();
+       //service.Job job =new service.Job();
+       //candidateList=new ArrayList<>();
+       //candidateList= job.getCandidateList();
     }
     public void emailShortListedCandidate()
     {
@@ -54,5 +55,38 @@ public class HR {
             System.out.println("---------------------------------------");
         }
     }
+    public void postJob()
+    {
+
+        Job job= JobSingleton.objectJob();
+        Job jobs[]=new Job[3];
+        String input="";
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter Job Desc ...");
+        input=scanner.nextLine();
+        for (int i=0;i<jobs.length;i++)
+        {
+            jobs[i]=new Job(i+" ",input);
+            job.addJobs(jobs[i]);
+            if(i != jobs.length-1)
+            input=scanner.nextLine();
+        }
+
+
+    }
+    public void getCandidateList()
+    {
+      Job job=JobSingleton.objectJob();
+      candidateList=new ArrayList<>();
+      candidateList=job.getCandidateList();
+      for(Candidate c : candidateList)
+      {
+          System.out.println("Job Id : "+c.getJob().getJob_id()+" Candidate Id : "+c.getCandidate_id());
+            skillSet=new SkillSet();
+            skillSet.getCandidateSkills(c.getCandidate_id());
+      }
+    }
+
+
 
 }
